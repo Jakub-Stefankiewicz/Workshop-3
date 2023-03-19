@@ -34,12 +34,17 @@ public class UserEdit extends HttpServlet {
         UserDao userDao=new UserDao();
         User user=new User();
         user.setId(id);
-        System.out.println(id);
-        user.setUserName(name);
-        user.setEmail(email);
-        user.setPassword(password);
 
-        userDao.update(user);
-
+        if (password.equals(repeatedPassword)) {
+            user.setUserName(name);
+            user.setEmail(email);
+            user.setPassword(password);
+            userDao.update(user);
+            response.sendRedirect("/userList");
+        }else {
+            String wrong="wrongpassword";
+            request.setAttribute("wrongpassword", wrong);
+            getServletContext().getRequestDispatcher("/users/add.jsp").forward(request,response);
+        }
     }
 }

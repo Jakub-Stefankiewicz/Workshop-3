@@ -25,24 +25,25 @@ public class UserAdd extends HttpServlet {
         String repeatedPassword=request.getParameter("repeatedPassword");
 
         User user=new User();
-        user.setUserName(name);
-        user.setEmail(email);
-        user.setPassword(password);
 
-        UserDao userDao=new UserDao();
-        userDao.create(user);
 
         if (password.equals(repeatedPassword)) {
-            System.out.println("jest git");
+
+            user.setUserName(name);
+            user.setEmail(email);
+            user.setPassword(password);
+            UserDao userDao=new UserDao();
+            userDao.create(user);
+
+            response.sendRedirect("/userList");
+
         } else {
-            System.out.println("zle haslo");
+
+            String wrong="wrongpassword";
+            request.setAttribute("wrongpassword", wrong);
+            getServletContext().getRequestDispatcher("/users/add.jsp").forward(request,response);
 
         }
-
-        System.out.println(name);
-
-        response.sendRedirect("/userList");
-
 
     }
 }

@@ -51,6 +51,11 @@
                     <div class="p-5">
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">Edycja użytkownika</h1>
+
+                            <c:if test="${wrongpassword!=null}">
+                                <h1 class="h4 text-gray-100 mb-4 bg-gradient-danger">Wpisz dwa razy to samo hasło</h1>
+                            </c:if>
+
                         </div>
                         <form class="user" action="/userAdd" method="post">
                             <div class="form-group">
