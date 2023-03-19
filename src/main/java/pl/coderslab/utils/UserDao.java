@@ -113,10 +113,10 @@ public class UserDao {
     public User[] findAll(){
         try (Connection conn= DbUtil.getConnection()) {
             User[] userArr=new User[0];
-            User user=new User();
             Statement stmt=conn.createStatement();
             ResultSet rs=stmt.executeQuery(FIND_ALL_QUERY);
             while (rs.next()){
+                User user=new User();
                 user.setId(rs.getInt(1));
                 user.setEmail(rs.getString(2));
                 user.setUserName(rs.getString(3));
