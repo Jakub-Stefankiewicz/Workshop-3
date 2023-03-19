@@ -70,7 +70,7 @@
                 <td>${user.email}</td>
                 <td>
                   <a href="/userDelete?id=${user.id}"> Delete </a>
-                  <a href="userList"> Edit </a>
+                  <a href="/userEdit?id=${user.id}"> Edit </a>
                   <a href="userList"> Show </a>
                 </td>
               </tr>
