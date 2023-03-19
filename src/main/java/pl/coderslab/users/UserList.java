@@ -15,7 +15,6 @@ public class UserList extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UserDao userDao=new UserDao();
-
         userList=userDao.findAll();
 
         if (userList==null){

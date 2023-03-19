@@ -61,16 +61,18 @@
               </tr>
               </thead>
               <tbody>
-
               <tr>
                 <td><c:out value="${user.id}"/></td>
                 <td><c:out value="${user.userName}"/></td>
                 <td><c:out value="${user.email}"/></td>
               </tr>
-
-
               </tbody>
             </table>
+
+
+
+
+
           </div>
         </div>
       </div>

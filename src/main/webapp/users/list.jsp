@@ -52,6 +52,16 @@
         </div>
         <div class="card-body">
           <div class="table-responsive">
+
+
+            <c:if test="${sure!=null}">
+            <h1>Czy na pewno chcesz usunąć użytkownika?</h1>
+            <div class="box">
+              <a class="button" href="/userDelete?id=${sure}">Potwierdzam, mordo</a>
+            </div>
+            </c:if>
+
+
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
               <tr>
@@ -69,7 +79,7 @@
                 <td>${user.userName}</td>
                 <td>${user.email}</td>
                 <td>
-                  <a href="/userDelete?id=${user.id}"> Delete </a>
+                  <a href="/userDelete?ver=${user.id}"> Delete </a>
                   <a href="/userEdit?id=${user.id}"> Edit </a>
                   <a href="/userShow?id=${user.id}"> Show </a>
                 </td>
