@@ -17,11 +17,8 @@ public class UserEdit extends HttpServlet {
 
         UserDao userDao=new UserDao();
         User user=userDao.read(id);
-        String name=user.getUserName();
-        request.setAttribute("name", name);
-        String email=user.getEmail();
-        request.setAttribute("email", email);
 
+        request.setAttribute("user", user);
 
         getServletContext().getRequestDispatcher("/users/edit.jsp").forward(request,response);
 

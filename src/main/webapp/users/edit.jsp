@@ -55,15 +55,15 @@
                         <form class="user" action="/userAdd" method="post">
                             <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="name"
-                                           placeholder=<c:out value="${name}"/> >
+                                           placeholder=<c:out value="${user.userName}"/> >
                                 </div>
 
                             <div class="form-group">
                                 <input type="email" class="form-control form-control-user" name="email"
-                                       placeholder=<c:out value="${email}"/>>
+                                       placeholder=<c:out value="${user.email}"/>>
                             </div>
 
-                            <input type="hidden" name="id" value="${id}"/>
+                            <input type="hidden" name="id" value="${user.id}"/>
 
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">

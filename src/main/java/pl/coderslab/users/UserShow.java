@@ -17,9 +17,7 @@ public class UserShow extends HttpServlet {
         UserDao userDao=new UserDao();
         User user=userDao.read(id);
 
-        request.setAttribute("name", user.getUserName());
-        request.setAttribute("email", user.getEmail());
-        request.setAttribute("id", id);
+        request.setAttribute("user", user);
 
         getServletContext().getRequestDispatcher("/users/show.jsp").forward(request,response);
 

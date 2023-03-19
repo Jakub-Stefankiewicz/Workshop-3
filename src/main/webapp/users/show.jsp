@@ -63,9 +63,9 @@
               <tbody>
 
               <tr>
-                <td><c:out value="${id}"/></td>
-                <td><c:out value="${name}"/></td>
-                <td><c:out value="${email}"/></td>
+                <td><c:out value="${user.id}"/></td>
+                <td><c:out value="${user.userName}"/></td>
+                <td><c:out value="${user.email}"/></td>
               </tr>
 
 
