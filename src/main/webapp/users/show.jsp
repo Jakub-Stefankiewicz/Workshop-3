@@ -48,7 +48,7 @@
 
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Lita użytkowników</h6>
+          <h6 class="m-0 font-weight-bold text-primary">Szczegóły użytkownika</h6>
         </div>
         <div class="card-body">
           <div class="table-responsive">
@@ -58,23 +58,16 @@
                 <th>ID</th>
                 <th>Nazwa użytkownika</th>
                 <th>email</th>
-                <th>Akcja</th>
               </tr>
               </thead>
               <tbody>
+
               <tr>
-                <c:forEach var="user" items="${users}">
-              <tr>
-                <td>${user.id}</td>
-                <td>${user.userName}</td>
-                <td>${user.email}</td>
-                <td>
-                  <a href="/userDelete?id=${user.id}"> Delete </a>
-                  <a href="/userEdit?id=${user.id}"> Edit </a>
-                  <a href="/userShow?id=${user.id}"> Show </a>
-                </td>
+                <td><c:out value="${id}"/></td>
+                <td><c:out value="${name}"/></td>
+                <td><c:out value="${email}"/></td>
               </tr>
-              </c:forEach>
+
 
               </tbody>
             </table>
