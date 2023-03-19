@@ -33,10 +33,14 @@ public class UserList extends HttpServlet {
         getServletContext().getRequestDispatcher("/users/list.jsp").forward(request,response);
 
 
+
+
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
 
     }
 }
