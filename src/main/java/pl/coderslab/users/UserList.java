@@ -29,10 +29,7 @@ public class UserList extends HttpServlet {
             System.out.println(user);
         }
 
-
         getServletContext().getRequestDispatcher("/users/list.jsp").forward(request,response);
-
-
 
 
     }
